@@ -4,3 +4,10 @@
   tasks:
   - name: Installing git package
     yum: name=git state=latest
+  - name: Installing java package
+    yum: name=java state=installed
+  - name: Create a directory
+    file:
+        path:/opt/test
+        state: directory
+        mode: "u=rw,g=wx,o=wx"
